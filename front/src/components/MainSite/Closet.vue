@@ -55,6 +55,8 @@ export default {
 <style scoped>
 #row {
   padding-top: 12%;
+  margin-left: 4%;
+  margin-right: 4%;
 }
 #imgdiv {
   height:300px; 
@@ -62,7 +64,7 @@ export default {
   display:inline-block;
   /* padding: 2%; */
   margin: 1%;
-  box-shadow: 8px 8px #817e7e;
+  box-shadow: 7px 7px #272726;
 }
 h2 {
   width:100%;
