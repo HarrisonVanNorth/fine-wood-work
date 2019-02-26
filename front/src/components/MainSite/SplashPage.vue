@@ -4,6 +4,7 @@
       id="carousel-fade"
       style="text-shadow: 0px 0px 2px #000 height:100%; width:100%;"
       fade
+      interval="10000"
     >
       <b-carousel-slide img-src="http://blog.coldwellbankerluxury.com/wp-content/uploads/2017/10/BLOG_LIsaAdams_Carlyle_HisClosetOverall_A_HR.jpg" />
       <b-carousel-slide img-src="https://i.pinimg.com/originals/67/6b/a1/676ba1dd19a79be334657265eff7ef80.jpg" />

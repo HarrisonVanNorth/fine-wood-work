@@ -1,5 +1,5 @@
 <template>
-  <b-navbar type="dark" variant="info">
+  <b-navbar type="dark">
     <b-col cols="2">
       <b-navbar-brand>FineWoodWork</b-navbar-brand>
     </b-col>
@@ -22,5 +22,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.navbar {
+background-color: rgba(165, 81, 13, 0.932);
 
+}
 </style>

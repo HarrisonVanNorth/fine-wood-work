@@ -10,7 +10,8 @@ export const store = new Vuex.Store({
     user: [],
     token: '',
     images: [],
-    testimonials: []
+    testimonials: [],
+    alert: null,
   },
   mutations: {
     //Login
@@ -24,6 +25,7 @@ export const store = new Vuex.Store({
     },
     receiveAdd(state, payload) {
       state.images = [ ...state.images, payload.images]
+      state.alert = payload.alert
     },
     receiveDelete(state, payload) {
       state.images = state.images.filter(image => image.id !== payload.id)
@@ -63,6 +65,7 @@ export const store = new Vuex.Store({
       try {
         const res = await axios.get('http://localhost:8000/images');
         context.commit('receiveImages', { images: res.data.images })
+        console.log(res.data.alert)
       } catch (error) {
         throw new Error(error);
       }

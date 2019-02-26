@@ -1,6 +1,6 @@
 <template>
   <b-row class="justify-content-md-center">
-    <b-col cols="6">
+    <b-col id="form" cols="6">
       <h3>Add Image</h3>
       <b-form v-on:submit.prevent="onUpload(upload, selected)">
         <b-form-group>
@@ -12,16 +12,21 @@
           <b-form-select v-model="selected" :options="options" />
         </b-form-group>
 
-        <b-button type='submit' variant="primary">Submit</b-button>
+        <b-button style="margin:4%;" type='submit' variant="primary">Submit</b-button>
       </b-form>
+      <app-alert></app-alert>
     </b-col>
   </b-row>
 </template>
 
 <script>
+import Alert from './Alert.vue'
 
 export default {
   name: 'AddImageVue',
+    components: {
+    'app-alert': Alert,
+    },
   data() {
     return {
       upload: null,
@@ -33,7 +38,7 @@ export default {
         {value: 'bathroom', text: 'Bathroom'},
         {value: 'furniture', text: 'Furniture'},
         {value: 'custom', text: 'Custom'}
-      ]
+      ],
     }
   },
   methods: {
@@ -42,7 +47,7 @@ export default {
     'upload': this.upload,
     'category':this.selected,
     })
-  }
+  },
 }
     
 }
@@ -50,5 +55,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+#form {
+    background-color: white;
+}
 
 </style>

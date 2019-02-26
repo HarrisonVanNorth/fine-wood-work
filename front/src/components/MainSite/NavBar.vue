@@ -1,13 +1,14 @@
 <template>
   <b-navbar id='navBar'>
     <b-col cols="3" id="imgdiv">
-      <b-img src="http://hybridfinewoodworking.com/images/services/4.png" rounded="circle" alt=""/> 
+      <b-img src="https://as1.ftcdn.net/jpg/01/30/52/60/500_F_130526046_ILjfFeHjMNktnLLkZ4bIzT0BCsegpQSx.jpg" rounded="circle" alt=""/> 
     </b-col>
     <b-col cols="6" id="linkList">
       <div>
-        <h3>Fine Wood working</h3>
-        <router-link style="color:#6b1414;" id='link' to="/SplashPage"><strong>Home</strong></router-link>
-        <!-- <router-link id='link' to="/Testimonials"><strong>About</strong></router-link> -->
+        <h3>Fine Wood Working</h3>
+        <router-link id='link' to="/SplashPage">
+          <strong>Home</strong>
+        </router-link>
         <router-link id='link' to="/Kitchen">Cabinets</router-link> 
         <router-link id='link' to="/Bathroom">Bathrooms</router-link> 
         <router-link id='link' to="/Closet">Closets</router-link>
@@ -27,7 +28,6 @@ export default {
   name: 'SplashPage',
   data(){
     return {
-
     }
   },
 
@@ -37,10 +37,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 #navBar {
-color: white;
-background-color: #000;
+color:  #eee4d2;
+background-color: rgba(165, 81, 13, 0.932);
 justify-content: center;
-opacity: .9;
 z-index: 2;
 width: 100%;
 position: absolute;
@@ -55,27 +54,30 @@ height: 20%;
 }
 
 #link {
-  color:  #3b3b3a;
+  color:  #272726;
   margin: 2% 2%;
   padding-right: 1%;
-  border-right: 1px solid #3b3b3a;
+  border-right: 1px solid #272726;
   border-bottom-right-radius: 5%;
   border-top-right-radius: 5%; 
 }
 
-#contact{
-  color:  #805e20;;
+#imgdiv {
+  height: 100%;
+  padding: 0 7.5%;
 }
 
-#imgdiv {
-  height: 90%;
-  padding: 0 8%;
+h1 {
+  text-transform: uppercase;
+    color:  #eee4d2;
+
 }
+
 
 h2{
-  color:#6b1414;
+  color:  #eee4d2;
   text-align: right;
-  margin:0%;
+  margin: 0%;
   font-family: "Times New Roman", Times, serif;
 }
 

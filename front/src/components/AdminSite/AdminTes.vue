@@ -1,14 +1,14 @@
 <template>
   <div>
     <app-links></app-links>
-    <b-row>
+    <b-container>
       <b-col>
         <app-add-testimonial></app-add-testimonial>
       </b-col>
       <b-col>
         <app-testimonial-list></app-testimonial-list>
       </b-col>
-    </b-row>
+    </b-container>
   </div>
 </template>
 
@@ -31,5 +31,13 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+div {
+  background-color:  #272726;
+}
 
+.container {
+  background-color:  #272726;
+  height: 100vh;
+
+}
 </style>

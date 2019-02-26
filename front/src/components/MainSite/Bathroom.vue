@@ -19,7 +19,6 @@
       size="lg" 
       v-model="modalShow" 
       style="height:300px; width:400px"
-      :body-bg-variant="dark"
       :hide-footer=true
       :hide-header=true
     >
@@ -31,7 +30,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'Bathroom',
   data(){
@@ -53,8 +51,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 #row {
   padding-top: 12%;
+  margin-left: 4%;
+  margin-right: 4%;
 }
 #imgdiv {
   height:300px; 
@@ -62,7 +63,7 @@ export default {
   display:inline-block;
   /* padding: 2%; */
   margin: 1%;
-  box-shadow: 8px 8px #817e7e;
+  box-shadow: 7px 7px #272726;
 }
 h2 {
   width:100%;

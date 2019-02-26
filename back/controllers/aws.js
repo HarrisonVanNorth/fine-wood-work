@@ -7,6 +7,7 @@ const baseAWSURL = "https://s3-us-west-2.amazonaws.com/fine-wood-work-182749/"
 
 module.exports = {
   upload: (req, res)=> {
+    console.log(req.files.file.name)
     let uploadData = {
       Key: req.files.file.name,
       Body: req.files.file.data,
@@ -14,15 +15,17 @@ module.exports = {
       ACL: 'public-read'
     }
     s3Bucket.putObject(uploadData, function (err, data) {
+      console.log("uploaded")
       if (err) {
-        return;
+        return res.json({alert: false})
       }
       knex('images').insert({
         img_url: baseAWSURL + uploadData.Key,
         category: req.body.category,
         key: "" + uploadData.Key
       }, '*').then((results) => {
-        res.json({ images: results[0] });
+        console.log(uploadData.key)
+        res.json({ images: results[0], alert: true });
       })
     });
   },
