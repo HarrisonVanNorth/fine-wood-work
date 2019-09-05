@@ -6,7 +6,7 @@ import AdminTes from'@/components/AdminSite/AdminTes'
 import Login from '@/components/AdminSite/Login'
 //Main
 import SplashPage from '@/components/MainSite/SplashPage'
-import Kitchen from '@/components/MainSite/Kitchen'
+// import Kitchen from '@/components/MainSite/Kitchen'
 import Bathroom from '@/components/MainSite/Bathroom'
 import Closet from '@/components/MainSite/Closet'
 import Testimonial from '@/components/MainSite/Testimonials'
