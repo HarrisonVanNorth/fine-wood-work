@@ -1,5 +1,4 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+
 //Admin
 import AdminImg from '@/components/AdminSite/AdminImg'
 import AdminTes from'@/components/AdminSite/AdminTes'
@@ -12,14 +11,7 @@ import Closet from '@/components/MainSite/Closet'
 import Testimonial from '@/components/MainSite/Testimonials'
 
 
-
-
-
-
-
-Vue.use(Router)
-
-export default new Router({
+export default ({
   routes: [
     //AdminSite
     {

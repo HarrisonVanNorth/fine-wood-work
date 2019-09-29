@@ -1,8 +1,6 @@
 <template>
-  <div id="app">
-    <NavBar/>
-    <img alt="Vue logo" src="./assets/logo.png">
-    <SplashPage/>
+  <div>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -13,7 +11,7 @@ import NavBar from './components/MainSite/NavBar'
 export default {
   name: 'app',
   components: {
-    SplashPage
+    'SplashPage': SplashPage
   }
 }
 </script>
