@@ -1,7 +1,7 @@
 const users = require("../controllers/users.js");
 const images = require("../controllers/images.js")
 const testimonials = require("../controllers/testimonials.js")
-// const aws = require("../controllers/aws.js");
+const aws = require("../controllers/aws.js");
 const jwt = require("jsonwebtoken");
 const secret = process.env.JWT_SECRET || "donuts";
 
@@ -25,9 +25,9 @@ module.exports = function (app) {
   //USERS after auth
   app.put('/users/:id', users.update);
 
-  //UPLOAD after auth
-  // app.post('/upload', aws.upload);
-  // app.delete('/delete/:key', aws.delete);
+  // UPLOAD after auth
+  app.post('/upload', aws.upload);
+  app.delete('/delete/:key', aws.delete);
 
   //TESTIMONIALS after auth
   app.put('/testimonials/:id', testimonials.update);

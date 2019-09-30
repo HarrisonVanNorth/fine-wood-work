@@ -24,7 +24,7 @@
 <script>
 
 export default {
-  name: 'SplashPage',
+  name: 'NavBar',
   data(){
     return {
 

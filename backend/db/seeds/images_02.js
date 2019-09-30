@@ -34,14 +34,6 @@ exports.seed = function(knex, Promise) {
         { img_url: 'https://s3-us-west-1.amazonaws.com/fine-wood-work-182749/closet_07.jpg', category: 'closet', key: 'closet_07.jpg' },
         { img_url: 'https://s3-us-west-1.amazonaws.com/fine-wood-work-182749/closet_08.jpg', category: 'closet', key: 'closet_08.jpg' },
         { img_url: 'https://s3-us-west-1.amazonaws.com/fine-wood-work-182749/closet_09.jpg', category: 'closet', key: 'closet_09.jpg' },
-
-
-
-
-
-
-
-
       ]);
     });
 };

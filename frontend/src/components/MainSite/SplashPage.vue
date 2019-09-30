@@ -1,16 +1,17 @@
 <template>
-<div>
-  <p>Hi</p>
-</div>
+  <div>
+    <NavBar></NavBar>
+  </div>
 </template>
 
 <script>
+import NavBar from './NavBar'
 
 export default {
   name: 'SplashPage',
   data(){
     return {
-
+      
     }
   },
 }
