@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NavBar></NavBar>
+    <app-NavBar></app-NavBar>
   </div>
 </template>
 
@@ -9,11 +9,9 @@ import NavBar from './NavBar'
 
 export default {
   name: 'SplashPage',
-  data(){
-    return {
-      
-    }
-  },
+  components: {
+    'app-NavBar': NavBar
+  }
 }
 </script>
 
