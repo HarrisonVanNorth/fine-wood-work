@@ -1,7 +1,7 @@
 exports.up = function(knex, Promise) {
   return knex.schema.createTable("images", (table) => {
   table.increments();
-  table.text("img_url");
+  table.text("img_file");
   table.string("category")
   table.string("key")
   table.timestamps(true, true);

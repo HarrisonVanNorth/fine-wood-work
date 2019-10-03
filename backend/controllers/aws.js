@@ -27,22 +27,21 @@ module.exports = {
     });
   },
 
-  delete: (req, res)=> {
-    let fileName = {
-      Bucket: "fine-wood-work-182749",
-      Key: req.params.key
-    }
-    s3Bucket.deleteObject(fileName, function (err,data){
-      if (err) {
-        console.log(err);
-        return;
-      } 
-      knex('images').delete()
-      .where('images.key', req.params.key).returning('*')
-      .then((images) => {
-        res.json(images[0].id)
-      })
-    })
-  }
-
+//   delete: (req, res)=> {
+//     let fileName = {
+//       Bucket: "fine-wood-work-182749",
+//       Key: req.params.key
+//     }
+//     s3Bucket.deleteObject(fileName, function (err,data){
+//       if (err) {
+//         console.log(err);
+//         return;
+//       } 
+//       knex('images').delete()
+//       .where('images.key', req.params.key).returning('*')
+//       .then((images) => {
+//         res.json(images[0].id)
+//       })
+//     })
+//   }
 }
