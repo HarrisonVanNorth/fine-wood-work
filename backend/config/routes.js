@@ -29,8 +29,10 @@ module.exports = function (app) {
   // app.put('/users/:id', users.update);
 
   // // UPLOAD after auth
+  app.get('/image_files', aws.image_files);
   app.post('/upload', aws.upload);
-  // app.delete('/delete/:key', aws.delete);
+  app.delete('/delete/:key', aws.delete);
+
 
 }
 

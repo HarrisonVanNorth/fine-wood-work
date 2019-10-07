@@ -7,9 +7,22 @@ var s3Bucket = new AWS.S3({ params: { Bucket: "fine-wood-work-182749", ACL: 'pub
 const baseAWSURL = "https://s3-us-west-2.amazonaws.com/fine-wood-work-182749/"
 
 module.exports = {
+  image_files: (req, res)=> {
+    let fileName = {
+      Bucket: "fine-wood-work-182749"
+    }
+    s3Bucket.listObjects(fileName, function (err, data) {
+      if (err) {
+        throw err
+      } else {
+        console.log("Success", data)
+      }
+    })
+
+  },
 
   upload: (req, res)=> {
-    // console.log(req)
+    // console.log(req.files)
     let uploadData = {
       Bucket: "fine-wood-work-182749",
       Key: req.files.data.name,
@@ -17,8 +30,11 @@ module.exports = {
       ContentType: req.files.data.mimetype  
     }
     s3Bucket.upload(uploadData, function (err, data) {
-      if (err)  throw err
-      console.log(`File uploaded successfully at ${data.Location}`)
+      if (err) {
+        throw err
+      } else {
+        console.log(`File uploaded successfully at ${data.Location}`)
+      }
     // }
       // knex('images').insert({
       //   img_url: baseAWSURL + uploadData.Key,
@@ -30,21 +46,23 @@ module.exports = {
     });
   },
 
-//   delete: (req, res)=> {
-//     let fileName = {
-//       Bucket: "fine-wood-work-182749",
-//       Key: req.params.key
-//     }
-//     s3Bucket.deleteObject(fileName, function (err,data){
-//       if (err) {
-//         console.log(err);
-//         return;
-//       } 
-//       knex('images').delete()
-//       .where('images.key', req.params.key).returning('*')
-//       .then((images) => {
-//         res.json(images[0].id)
-//       })
-//     })
-//   }
+  delete: (req, res)=> {
+    console.log(req.params)
+    let fileName = {
+      Bucket: "fine-wood-work-182749",
+      Key: req.params.key
+    }
+    s3Bucket.deleteObject(fileName, function (err,data){
+      if (err) { 
+        throw err
+      } else {
+        console.log(`File deletion successfull at ${data.location}`)
+      }
+      // knex('images').delete()
+      // .where('images.key', req.params.key).returning('*')
+      // .then((images) => {
+      //   res.json(images[0].id)
+      // })
+    })
+  }
 }
